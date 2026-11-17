@@ -1,6 +1,6 @@
 //
 //  MeetingDetailView.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 
 import SwiftUI

@@ -1,6 +1,6 @@
 //
 //  Meeting.swift
-//  MeetingNotes (shared by the iPhone and Apple Watch apps)
+//  Quik2Lsn (shared by the iPhone and Apple Watch apps)
 //
 
 import Foundation

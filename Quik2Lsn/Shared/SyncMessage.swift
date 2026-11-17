@@ -1,6 +1,6 @@
 //
 //  SyncMessage.swift
-//  MeetingNotes (shared)
+//  Quik2Lsn (shared)
 //
 //  Messages exchanged between the watch and the iPhone over WatchConnectivity.
 //

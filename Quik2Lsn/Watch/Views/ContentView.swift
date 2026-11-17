@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 
 import SwiftUI
@@ -46,7 +46,7 @@ struct ContentView: View {
             RecordingView(coordinator: coordinator, recorder: coordinator.recorder)
         }
         .alert(
-            "Meeting Notes",
+            "Quik2Lsn",
             isPresented: Binding(
                 get: { coordinator.alertMessage != nil },
                 set: { if !$0 { coordinator.alertMessage = nil } })

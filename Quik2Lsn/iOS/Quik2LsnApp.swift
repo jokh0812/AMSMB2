@@ -1,6 +1,6 @@
 //
-//  MeetingNotesApp.swift
-//  MeetingNotes (iPhone)
+//  Quik2LsnApp.swift
+//  Quik2Lsn (iPhone)
 //
 //  The iPhone app does the heavy lifting for the watch: it transcribes each
 //  recording and asks Claude for the summary and action items.
@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct MeetingNotesApp: App {
+struct Quik2LsnApp: App {
     @StateObject private var store = MeetingStore.shared
     @StateObject private var processor = MeetingProcessor.shared
     @StateObject private var connectivity = PhoneConnectivityManager.shared

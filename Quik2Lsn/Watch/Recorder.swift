@@ -1,6 +1,6 @@
 //
 //  Recorder.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 //  Records the meeting from the watch microphone as 16 kHz mono AAC — small
 //  files that transfer quickly and are plenty for speech recognition.

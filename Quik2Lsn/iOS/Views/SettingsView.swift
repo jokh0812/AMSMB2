@@ -1,6 +1,6 @@
 //
 //  SettingsView.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 
 import Speech
@@ -50,8 +50,8 @@ struct SettingsView: View {
                 }
 
                 Section("Watch Face Shortcut") {
-                    Text("On your watch, touch and hold the watch face › Edit › Complications, then choose Meeting Notes. One tap on it starts recording.")
-                    Text("You can also say \"Start a meeting in Meeting Notes\" to Siri, or on Apple Watch Ultra assign the Start Meeting Notes shortcut to the Action button.")
+                    Text("On your watch, touch and hold the watch face › Edit › Complications, then choose Quik2Lsn. One tap on it starts recording.")
+                    Text("You can also say \"Start a meeting in Quik2Lsn\" to Siri, or on Apple Watch Ultra assign the Start Quik2Lsn shortcut to the Action button.")
                 }
                 .font(.callout)
             }

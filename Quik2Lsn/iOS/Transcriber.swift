@@ -1,6 +1,6 @@
 //
 //  Transcriber.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 //  Speech-to-text with Apple's Speech framework. Claude's API takes text, not
 //  audio, so the iPhone transcribes first. Recognition runs on-device when the
@@ -20,7 +20,7 @@ enum TranscriptionError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .notAuthorized:
-            return "Allow Speech Recognition for Meeting Notes in iPhone Settings, then tap Try Again."
+            return "Allow Speech Recognition for Quik2Lsn in iPhone Settings, then tap Try Again."
         case .recognizerUnavailable:
             return "Speech recognition isn't available right now. Try again shortly."
         }

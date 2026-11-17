@@ -1,6 +1,6 @@
 //
 //  WatchConnectivityManager.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 //  Sends recordings to the iPhone and merges the notes the iPhone sends back.
 //

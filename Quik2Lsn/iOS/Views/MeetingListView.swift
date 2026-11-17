@@ -1,6 +1,6 @@
 //
 //  MeetingListView.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 
 import SwiftUI
@@ -44,11 +44,11 @@ struct MeetingListView: View {
                         "No Meetings Yet",
                         systemImage: "applewatch",
                         description: Text(
-                            "Tap the Meeting Notes complication on your watch face to record a meeting. "
+                            "Tap the Quik2Lsn complication on your watch face to record a meeting. "
                                 + "It's transcribed here and Claude writes the summary and action items."))
                 }
             }
-            .navigationTitle("Meeting Notes")
+            .navigationTitle("Quik2Lsn")
             .navigationDestination(for: UUID.self) { id in
                 MeetingDetailView(meetingID: id)
             }

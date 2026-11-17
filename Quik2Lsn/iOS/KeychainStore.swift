@@ -1,6 +1,6 @@
 //
 //  KeychainStore.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 //  Stores the Claude API key in the iOS Keychain (never in UserDefaults or files).
 //
@@ -9,7 +9,7 @@ import Foundation
 import Security
 
 enum KeychainStore {
-    private static let service = "MeetingNotes.ClaudeAPIKey"
+    private static let service = "Quik2Lsn.ClaudeAPIKey"
     private static let account = "default"
 
     static var apiKey: String? {

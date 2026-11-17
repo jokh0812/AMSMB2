@@ -1,6 +1,6 @@
 //
 //  StartMeetingIntent.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 //  "Start Meeting" for Siri, the Shortcuts app, Smart Stack and — on Apple
 //  Watch Ultra — the Action button (Settings › Action Button › Shortcut).
@@ -9,7 +9,7 @@
 import AppIntents
 
 struct StartMeetingIntent: AppIntent {
-    static var title: LocalizedStringResource = "Start Meeting Notes"
+    static var title: LocalizedStringResource = "Start Quik2Lsn"
     static var description = IntentDescription(
         "Starts recording a meeting. Claude summarizes it and lists the action items when you stop.")
     static var openAppWhenRun = true
@@ -22,7 +22,7 @@ struct StartMeetingIntent: AppIntent {
 }
 
 struct StopMeetingIntent: AppIntent {
-    static var title: LocalizedStringResource = "Stop Meeting Notes"
+    static var title: LocalizedStringResource = "Stop Quik2Lsn"
     static var description = IntentDescription("Stops the current meeting recording and sends it for notes.")
     static var openAppWhenRun = true
 
@@ -33,7 +33,7 @@ struct StopMeetingIntent: AppIntent {
     }
 }
 
-struct MeetingNotesShortcuts: AppShortcutsProvider {
+struct Quik2LsnShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: StartMeetingIntent(),

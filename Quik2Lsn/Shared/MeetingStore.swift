@@ -1,6 +1,6 @@
 //
 //  MeetingStore.swift
-//  MeetingNotes (shared)
+//  Quik2Lsn (shared)
 //
 //  Keeps meetings in a JSON file in the app's Documents folder and audio files
 //  in Documents/Audio.

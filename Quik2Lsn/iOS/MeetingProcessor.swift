@@ -1,6 +1,6 @@
 //
 //  MeetingProcessor.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 //  Runs each recording through: transcribe on-device → Claude notes → sync to
 //  the watch. Meetings are processed one at a time; anything unfinished is

@@ -1,6 +1,6 @@
-# XcodeGen spec — run `xcodegen generate` in this folder to create MeetingNotes.xcodeproj.
+# XcodeGen spec — run `xcodegen generate` in this folder to create Quik2Lsn.xcodeproj.
 # Before building, replace the bundle ID prefix below and set DEVELOPMENT_TEAM.
-name: MeetingNotes
+name: Quik2Lsn
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
@@ -18,7 +18,7 @@ settings:
 
 targets:
   # iPhone companion: transcribes recordings and calls Claude.
-  MeetingNotes:
+  Quik2Lsn:
     type: application
     platform: iOS
     sources:
@@ -27,23 +27,23 @@ targets:
     info:
       path: iOS/Info.plist
       properties:
-        CFBundleDisplayName: Meeting Notes
+        CFBundleDisplayName: Quik2Lsn
         UILaunchScreen: {}
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
-        NSSpeechRecognitionUsageDescription: Meeting Notes transcribes meetings you record on your Apple Watch so Claude can summarize them.
+        NSSpeechRecognitionUsageDescription: Quik2Lsn transcribes meetings you record on your Apple Watch so Claude can summarize them.
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.quik2lsn
         TARGETED_DEVICE_FAMILY: "1"
     dependencies:
-      - target: MeetingNotesWatch
+      - target: Quik2LsnWatch
         embed: true
         copy:
           destination: productsDirectory
           subpath: $(CONTENTS_FOLDER_PATH)/Watch
 
   # Apple Watch app: records meetings and shows notes.
-  MeetingNotesWatch:
+  Quik2LsnWatch:
     type: application
     platform: watchOS
     sources:
@@ -52,24 +52,24 @@ targets:
     info:
       path: Watch/Info.plist
       properties:
-        CFBundleDisplayName: Meeting Notes
+        CFBundleDisplayName: Quik2Lsn
         WKApplication: true
-        WKCompanionAppBundleIdentifier: com.example.meetingnotes
+        WKCompanionAppBundleIdentifier: com.example.quik2lsn
         WKRunsIndependentlyOfCompanionApp: false
         WKBackgroundModes: [audio]
-        NSMicrophoneUsageDescription: Meeting Notes records your meetings so they can be transcribed and summarized.
+        NSMicrophoneUsageDescription: Quik2Lsn records your meetings so they can be transcribed and summarized.
         CFBundleURLTypes:
-          - CFBundleURLName: com.example.meetingnotes.watchkitapp
-            CFBundleURLSchemes: [meetingnotes]
+          - CFBundleURLName: com.example.quik2lsn.watchkitapp
+            CFBundleURLSchemes: [quik2lsn]
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes.watchkitapp
-        PRODUCT_NAME: MeetingNotesWatch
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.quik2lsn.watchkitapp
+        PRODUCT_NAME: Quik2LsnWatch
     dependencies:
-      - target: MeetingNotesComplication
+      - target: Quik2LsnComplication
 
   # Watch-face complication that launches straight into recording.
-  MeetingNotesComplication:
+  Quik2LsnComplication:
     type: app-extension
     platform: watchOS
     sources:
@@ -77,9 +77,9 @@ targets:
     info:
       path: WatchWidget/Info.plist
       properties:
-        CFBundleDisplayName: Meeting Notes
+        CFBundleDisplayName: Quik2Lsn
         NSExtension:
           NSExtensionPointIdentifier: com.apple.widgetkit-extension
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes.watchkitapp.complication
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.quik2lsn.watchkitapp.complication

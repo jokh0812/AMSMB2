@@ -1,4 +1,4 @@
-# Meeting Notes for Apple Watch
+# Quik2Lsn for Apple Watch
 
 Record a meeting from your watch face. Your iPhone transcribes it and Claude
 writes a title, summary, key points, decisions and action items, which sync
@@ -35,10 +35,10 @@ notes + action items ◄───────────── WatchConnectivit
 
 - **Complication** (`WatchWidget/`): circular, corner, rectangular and inline
   styles. Tapping it opens the app and **starts recording immediately**. To add
-  it, touch and hold the watch face › Edit › Complications › Meeting Notes.
-- **Siri / Shortcuts / Action button**: "Start a meeting in Meeting Notes" and
-  "Stop the meeting in Meeting Notes" (`Watch/StartMeetingIntent.swift`). On
-  Apple Watch Ultra, assign *Start Meeting Notes* to the Action button.
+  it, touch and hold the watch face › Edit › Complications › Quik2Lsn.
+- **Siri / Shortcuts / Action button**: "Start a meeting in Quik2Lsn" and
+  "Stop the meeting in Quik2Lsn" (`Watch/StartMeetingIntent.swift`). On
+  Apple Watch Ultra, assign *Start Quik2Lsn* to the Action button.
 
 ## Setup
 
@@ -46,10 +46,10 @@ Requires a Mac with Xcode 15 or later, an iPhone on iOS 17+, and an Apple Watch
 on watchOS 10+.
 
 1. `brew install xcodegen`, then run `xcodegen generate` in this folder.
-2. Open `MeetingNotes.xcodeproj`. In `project.yml` (or each target's Signing
+2. Open `Quik2Lsn.xcodeproj`. In `project.yml` (or each target's Signing
    tab) set your Team and replace `com.example` with your own bundle ID prefix
    in all three bundle IDs and in `WKCompanionAppBundleIdentifier`.
-3. Build and run the **MeetingNotes** scheme on your iPhone. The watch app
+3. Build and run the **Quik2Lsn** scheme on your iPhone. The watch app
    installs with it.
 4. In the iPhone app, tap the gear and paste a Claude API key from
    console.anthropic.com. Allow speech recognition.

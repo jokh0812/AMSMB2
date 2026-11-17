@@ -1,6 +1,6 @@
 //
 //  ClaudeClient.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 //  Turns a transcript into a title, summary, key points, decisions and action
 //  items with one call to the Claude Messages API. Swift has no official

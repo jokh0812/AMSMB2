@@ -1,6 +1,6 @@
 //
 //  MeetingDetailView.swift
-//  MeetingNotes (iPhone)
+//  Quik2Lsn (iPhone)
 //
 
 import SwiftUI

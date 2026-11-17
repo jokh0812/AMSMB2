@@ -1,6 +1,6 @@
 //
 //  RecordingCoordinator.swift
-//  MeetingNotes Watch App
+//  Quik2Lsn Watch App
 //
 //  One place that starts and stops recordings, so the app UI, the complication
 //  deep link and the "Start Meeting" App Intent all behave the same.
@@ -26,7 +26,7 @@ final class RecordingCoordinator: ObservableObject {
             return
         }
         guard await recorder.requestPermission() else {
-            alertMessage = "Allow microphone access for Meeting Notes in the Watch app on your iPhone (Privacy › Microphone)."
+            alertMessage = "Allow microphone access for Quik2Lsn in the Watch app on your iPhone (Privacy › Microphone)."
             return
         }
         do {

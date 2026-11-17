@@ -1,6 +1,6 @@
 //
-//  MeetingNotesComplication.swift
-//  MeetingNotes Complication (watchOS widget extension)
+//  Quik2LsnComplication.swift
+//  Quik2Lsn Complication (watchOS widget extension)
 //
 //  A watch-face complication that starts a meeting recording with one tap.
 //  Add it from the watch face editor (long-press the face › Edit › Complications)
@@ -10,7 +10,7 @@
 import SwiftUI
 import WidgetKit
 
-private let recordURL = URL(string: "meetingnotes://record")!
+private let recordURL = URL(string: "quik2lsn://record")!
 
 struct LaunchEntry: TimelineEntry {
     let date: Date
@@ -29,7 +29,7 @@ struct LaunchProvider: TimelineProvider {
     }
 }
 
-struct MeetingNotesComplicationView: View {
+struct Quik2LsnComplicationView: View {
     @Environment(\.widgetFamily) private var family
 
     var body: some View {
@@ -52,7 +52,7 @@ struct MeetingNotesComplicationView: View {
                     .font(.title)
                     .widgetAccentable()
                 VStack(alignment: .leading) {
-                    Text("Meeting Notes").font(.headline)
+                    Text("Quik2Lsn").font(.headline)
                     Text("Tap to record").font(.caption).foregroundStyle(.secondary)
                 }
                 Spacer(minLength: 0)
@@ -66,10 +66,10 @@ struct MeetingNotesComplicationView: View {
 }
 
 @main
-struct MeetingNotesComplication: Widget {
+struct Quik2LsnComplication: Widget {
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: "MeetingNotesLauncher", provider: LaunchProvider()) { _ in
-            MeetingNotesComplicationView()
+        StaticConfiguration(kind: "Quik2LsnLauncher", provider: LaunchProvider()) { _ in
+            Quik2LsnComplicationView()
                 .widgetURL(recordURL)
                 .containerBackground(.clear, for: .widget)
         }

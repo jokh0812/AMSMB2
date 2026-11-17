@@ -1,6 +1,6 @@
 //
 //  Formatting.swift
-//  MeetingNotes (shared)
+//  Quik2Lsn (shared)
 //
 
 import Foundation
