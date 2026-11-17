@@ -36,8 +36,11 @@ notes + action items ◄───────────── WatchConnectivit
 - **Complication** (`WatchWidget/`): circular, corner, rectangular and inline
   styles. Tapping it opens the app and **starts recording immediately**. To add
   it, touch and hold the watch face › Edit › Complications › Quik2Lsn.
-- **Siri / Shortcuts / Action button**: "Start a meeting in Quik2Lsn" and
-  "Stop the meeting in Quik2Lsn" (`Watch/StartMeetingIntent.swift`). On
+- **Siri / Shortcuts / Action button**: say "Start meeting notes" and "Stop
+  meeting notes" (`Watch/StartMeetingIntent.swift`). This works because
+  "Meeting Notes" is registered as an alternative app name for Siri
+  (`INAlternativeAppNames` in `project.yml`); "Start Quik2Lsn" and "Start a
+  meeting in Quik2Lsn" work too, and Siri says the name as "Quick to Listen". On
   Apple Watch Ultra, assign *Start Quik2Lsn* to the Action button.
 
 ## Setup

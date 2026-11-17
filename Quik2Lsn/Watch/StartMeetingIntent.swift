@@ -37,7 +37,10 @@ struct Quik2LsnShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: StartMeetingIntent(),
+            // INAlternativeAppNames in Info.plist makes Siri accept "Meeting Notes"
+            // as the app name, so "Start meeting notes" matches the first phrase.
             phrases: [
+                "Start \(.applicationName)",
                 "Start a meeting in \(.applicationName)",
                 "Record a meeting with \(.applicationName)",
                 "Take meeting notes with \(.applicationName)",
@@ -47,6 +50,7 @@ struct Quik2LsnShortcuts: AppShortcutsProvider {
         AppShortcut(
             intent: StopMeetingIntent(),
             phrases: [
+                "Stop \(.applicationName)",
                 "Stop the meeting in \(.applicationName)",
                 "End meeting notes in \(.applicationName)",
             ],

@@ -29,6 +29,12 @@ targets:
       properties:
         CFBundleDisplayName: Quik2Lsn
         UILaunchScreen: {}
+        # Siri: pronounce the name as "Quick to Listen" and also accept
+        # "Meeting Notes" as the app name ("Start meeting notes").
+        CFBundleSpokenName: Quick to Listen
+        INAlternativeAppNames:
+          - INAlternativeAppName: Meeting Notes
+          - INAlternativeAppName: Quick Listen
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
         NSSpeechRecognitionUsageDescription: Quik2Lsn transcribes meetings you record on your Apple Watch so Claude can summarize them.
     settings:
@@ -54,6 +60,12 @@ targets:
       properties:
         CFBundleDisplayName: Quik2Lsn
         WKApplication: true
+        # Siri: pronounce the name as "Quick to Listen" and also accept
+        # "Meeting Notes" as the app name ("Start meeting notes").
+        CFBundleSpokenName: Quick to Listen
+        INAlternativeAppNames:
+          - INAlternativeAppName: Meeting Notes
+          - INAlternativeAppName: Quick Listen
         WKCompanionAppBundleIdentifier: com.example.quik2lsn
         WKRunsIndependentlyOfCompanionApp: false
         WKBackgroundModes: [audio]
