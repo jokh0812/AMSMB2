@@ -1,0 +1,85 @@
+# XcodeGen spec — run `xcodegen generate` in this folder to create MeetingNotes.xcodeproj.
+# Before building, replace the bundle ID prefix below and set DEVELOPMENT_TEAM.
+name: MeetingNotes
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "17.0"
+    watchOS: "10.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""   # your Apple Developer Team ID
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  # iPhone companion: transcribes recordings and calls Claude.
+  MeetingNotes:
+    type: application
+    platform: iOS
+    sources:
+      - iOS
+      - Shared
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: Meeting Notes
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        NSSpeechRecognitionUsageDescription: Meeting Notes transcribes meetings you record on your Apple Watch so Claude can summarize them.
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes
+        TARGETED_DEVICE_FAMILY: "1"
+    dependencies:
+      - target: MeetingNotesWatch
+        embed: true
+        copy:
+          destination: productsDirectory
+          subpath: $(CONTENTS_FOLDER_PATH)/Watch
+
+  # Apple Watch app: records meetings and shows notes.
+  MeetingNotesWatch:
+    type: application
+    platform: watchOS
+    sources:
+      - Watch
+      - Shared
+    info:
+      path: Watch/Info.plist
+      properties:
+        CFBundleDisplayName: Meeting Notes
+        WKApplication: true
+        WKCompanionAppBundleIdentifier: com.example.meetingnotes
+        WKRunsIndependentlyOfCompanionApp: false
+        WKBackgroundModes: [audio]
+        NSMicrophoneUsageDescription: Meeting Notes records your meetings so they can be transcribed and summarized.
+        CFBundleURLTypes:
+          - CFBundleURLName: com.example.meetingnotes.watchkitapp
+            CFBundleURLSchemes: [meetingnotes]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes.watchkitapp
+        PRODUCT_NAME: MeetingNotesWatch
+    dependencies:
+      - target: MeetingNotesComplication
+
+  # Watch-face complication that launches straight into recording.
+  MeetingNotesComplication:
+    type: app-extension
+    platform: watchOS
+    sources:
+      - WatchWidget
+    info:
+      path: WatchWidget/Info.plist
+      properties:
+        CFBundleDisplayName: Meeting Notes
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.meetingnotes.watchkitapp.complication
